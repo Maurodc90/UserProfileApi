@@ -1,15 +1,26 @@
 package com.maurodelcore.user_profile_api.model;
 
+/**
+ * Represents an immutable user profile.
+ * <p>
+ * Fields are {@code final} with no setters, since this application never
+ * needs to modify a user's details after creation.
+ */
 public class User {
 
-    // For this exercise, we will use final fields to ensure immutability.
     private final String username;
     private final int age;
     private final String email;
     private final String country;
 
-
-    //Constructor
+    /**
+     * Creates a new immutable user profile.
+     *
+     * @param username the user's username
+     * @param age      the user's age
+     * @param email    the user's email address
+     * @param country  the user's country
+     */
     public User(String username, int age, String email, String country) {
         this.username = username;
         this.age = age;
@@ -17,9 +28,6 @@ public class User {
         this.country = country;
     }
 
-    // Getters with no setters to ensure immutability
-    // The point of not having setter and final fields
-    // is because this app will not require changing the value once the user is created.
     public String getUsername() {
         return username;
     }
